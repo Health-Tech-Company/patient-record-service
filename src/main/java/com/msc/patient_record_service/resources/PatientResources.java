@@ -2,10 +2,10 @@ package com.msc.patient_record_service.resources;
 
 import com.msc.patient_record_service.model.Patient;
 import com.msc.patient_record_service.service.PatientService;
-import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
