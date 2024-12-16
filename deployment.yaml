@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  labels:
+    app: patient-record-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: patient-record-service
+  template:
+    metadata:
+      labels:
+        app: patient-record-service
+    spec:
+      containers:
+        - name: patient-record-service
+          image: gcr.io/cobalt-balancer-444315-g1/patient-record-service:prod
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
