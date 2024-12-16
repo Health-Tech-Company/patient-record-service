@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: notification-service
+  name: patient-record-service
   labels:
     app: patient-record-service
 spec:
